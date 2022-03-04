@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SevillaDotNet.Page2"
+             Title="Page2"
+             BackgroundColor="White">
+    <StackLayout Spacing="10">
+        <Label Text="This is the page number two"
+               FontSize="Large" TextColor="Green"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+        <Button x:Name="btCloseModal" Text="Close modal" Clicked="btCloseModal_Clicked" IsVisible="False"/>
+        <Button x:Name="btCloseWindows" Text="Close window" Clicked="btCloseWindow_Clicked" IsVisible="False"/>
+    </StackLayout>
+</ContentPage>

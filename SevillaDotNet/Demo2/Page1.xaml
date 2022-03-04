@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SevillaDotNet.Page1"
+             Title="Page1"
+             BackgroundColor="White">
+    <StackLayout Spacing="10">
+        <Label Text="This is the page number one"
+               FontSize="Large" TextColor="Red"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+        <Button x:Name="btBack" Text="Go back" Clicked="btBack_Clicked"  IsVisible="False"/>
+    </StackLayout>
+</ContentPage>

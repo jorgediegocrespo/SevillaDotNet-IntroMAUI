@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SevillaDotNet.Demo3"
+             Title="Demo3"
+             BackgroundColor="White">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="RoundedButton" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="CornerRadius" Value="25" />
+                <Setter Property="BackgroundColor" Value="LightGray" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <ScrollView Orientation="Vertical">
+        <StackLayout Spacing="5">
+
+            <Label Text="My first MAUI app"
+                FontSize="Title" FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label Text="Dolore dolore in eu rebum labore stet ipsum invidunt amet eos. Ipsum adipiscing sanctus amet eirmod no no exerci dolor amet dolore. Nonumy amet justo vulputate in dolor ut facilisi. Praesent gubergren dolor illum lorem sit et sed accusam blandit takimata facer ut ut dolor dolores vero. Praesent takimata elitr est eirmod amet sit at rebum molestie vero dolor dignissim ea et no duo et nisl. Dolores sea suscipit sed ut diam sit elitr ut et et facilisi magna nonummy duo aliquip et.Takimata magna kasd invidunt eirmod est autem et elitr magna et et. Diam nobis suscipit diam qui feugiat amet kasd lorem lorem voluptua lorem clita molestie at nonumy dolor sadipscing. Sed dolore dolore suscipit eos nonumy ut in erat consetetur lorem consetetur et lorem. At lorem eos feugait magna te sit exerci sea vel ut accusam iriure in dolore consetetur consetetur facilisi nonumy. Elitr ut sit velit. Ipsum adipiscing labore dolores amet at ipsum lorem erat nulla dolor dolores liber kasd nulla. Takimata ipsum consequat eirmod sit accusam.Sit no molestie et at et nonumy lorem tempor est sed at at no. Elitr magna accusam ipsum magna. Gubergren sea aliquyam consetetur ipsum ut et consetetur ipsum vulputate magna dolor elitr dolores. Sanctus odio at facilisi wisi consetetur erat. Consectetuer lorem sit magna sed facilisis sea lorem mazim diam vero no ut nibh et diam. Takimata no diam dolores feugiat duis dolore sadipscing diam ea sadipscing. Vulputate magna voluptua aliquyam vero diam nonumy sed lorem elitr. At nonumy lobortis sea justo eros sit. Autem dolor sit diam labore elitr dolores amet diam nam tempor stet consetetur eu. Dolores gubergren duis aliquyam dolore consetetur. Blandit nisl ea aliquyam ipsum facilisis vero hendrerit rebum invidunt. Et iriure autem magna ipsum elitr tempor vulputate eum clita accusam illum erat nonumy feugait et. Dolor ipsum aliquyam diam lobortis. Ipsum luptatum clita eirmod sadipscing esse voluptua eirmod eum dolor molestie eos invidunt nonumy sed vulputate. Elitr accusam ipsum facer clita duo.Nonumy sed duo in consetetur. Invidunt esse rebum duo sea dolor lorem consetetur tempor et vero dolor consequat et et iusto magna at sea. Eirmod dolor sanctus suscipit ipsum augue diam lorem lorem amet sea. Autem sit sit eirmod placerat nonumy et gubergren ipsum nihil labore sanctus dolores consequat lorem. Vero aliquip dolor eos amet et duo blandit erat est.Ea lorem diam voluptua kasd sed elit diam tincidunt diam et elitr feugait. Nulla takimata duo consetetur elitr ipsum. Zzril sea accusam rebum nisl eu kasd sed et gubergren sit elitr ullamcorper dolor. Lobortis takimata sit et. Dolores est sed dolores velit veniam. Lobortis elitr et labore congue nibh sit.Vulputate clita facilisis gubergren sit no dolor sit lorem amet labore. No consequat quis diam vel. Sed dolore tation tempor no nonumy takimata hendrerit invidunt duis at tempor aliquyam feugait. Dolor et sit vero wisi duo in consectetuer ea invidunt takimata feugiat ipsum rebum invidunt sea sea. Sed et eos. Sit et molestie ipsum sea."
+                FontSize="Medium"
+                HorizontalOptions="Center" />
+
+            <Image Grid.Row="4"
+                   Source="dotnet_bot.png"
+                   Aspect="AspectFit"
+                   WidthRequest="250"
+                   HeightRequest="310"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Say hello" HorizontalOptions="Center" Command="{Binding SayHelloCommand}"/>
+            <Button Text="Navigate" HorizontalOptions="Center" Command="{Binding NavigateCommand}"/>
+
+            <Grid RowDefinitions="60,60,Auto" ColumnDefinitions="*,*">
+                <Entry x:Name="enFirstOperator" Grid.Row="0" Grid.Column="0" Keyboard="Numeric" Text="{Binding FirstOperator}"/>
+                <Entry x:Name="enSecondOperator" Grid.Row="0" Grid.Column="1" Keyboard="Numeric" Text="{Binding SecondOperator}"/>
+                <Button x:Name="btAdd" Text="{OnPlatform iOS='Plus', Default='Add'}" Grid.Row="1" Style="{StaticResource RoundedButton}" Command="{Binding AddCommand}" />
+                <Button x:Name="btMultiplication" Style="{StaticResource RoundedButton}" Text="Multiply" Grid.Row="1" Grid.Column="1" Command="{Binding MultiplyCommand}"/>
+                <Label x:Name="lbResult" Grid.Row="2" Grid.ColumnSpan="2" FontSize="Large" TextColor="Red" Text="{Binding Result, Mode=OneWay}" HorizontalTextAlignment="Center"/>
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

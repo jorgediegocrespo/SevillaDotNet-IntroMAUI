@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SevillaDotNet.Flyout"
+             xmlns:local="clr-namespace:SevillaDotNet"
+             Title="Flyout example"
+             BackgroundColor="White"
+            FlyoutLayoutBehavior="Popover">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+            <StackLayout Spacing="10" Padding="10,20">
+                <Button x:Name="btPage1" Text="Go to page 1" BackgroundColor="Transparent" HorizontalOptions="Start" Clicked="btPage1_Clicked" BorderColor="Transparent" TextColor="Red"/>
+                <Button x:Name="btPage2" Text="Go to page 2" BackgroundColor="Transparent" HorizontalOptions="Start" Clicked="btPage2_Clicked" BorderColor="Transparent" TextColor="Green"/>
+                <Button x:Name="btPage3" Text="Go to tabbed" BackgroundColor="Transparent" HorizontalOptions="Start" Clicked="btPage3_Clicked"  BorderColor="Transparent" TextColor="Blue"/>
+                <Button x:Name="btPage4" Text="Go to navigation" BackgroundColor="Transparent" HorizontalOptions="Start" Clicked="btPage4_Clicked"  BorderColor="Transparent" TextColor="Black"/>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+        <local:Page1 />
+    </FlyoutPage.Detail>
+</FlyoutPage>
